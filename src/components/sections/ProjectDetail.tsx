@@ -89,7 +89,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
                 className="font-mono text-xs tracking-widest uppercase mb-6"
                 style={{ color: project.color }}
               >
-                // {project.tags.join(" · ")}
+                {"// "}{project.tags.join(" · ")}
               </p>
               <h1
                 className="font-archivo font-black text-[#0D0D0D]"
@@ -168,7 +168,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
                 className="font-mono text-xs tracking-widest uppercase mb-8"
                 style={{ color: project.color }}
               >
-                // {L.challenge}
+                {"// "}{L.challenge}
               </p>
               <h2
                 className="font-archivo font-black text-[#0D0D0D]"
@@ -230,7 +230,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
                 className="font-mono text-xs tracking-widest uppercase mb-8"
                 style={{ color: project.color }}
               >
-                // {L.solution}
+                {"// "}{L.solution}
               </p>
               <h2
                 className="font-archivo font-black text-[#0D0D0D]"
@@ -281,7 +281,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
                 className="font-mono text-xs tracking-widest uppercase"
                 style={{ color: project.color }}
               >
-                // {L.results}
+                {"// "}{L.results}
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.08}>

@@ -63,7 +63,7 @@ export default function ServiceDetail({ service, locale, nextService }: Props) {
                 className="font-mono text-xs tracking-widest uppercase mb-6"
                 style={{ color: service.color === "#F2F0EB" ? "#0D0D0D" : service.color }}
               >
-                // {service.tags.join(" · ")}
+                {"// "}{service.tags.join(" · ")}
               </p>
               <h1
                 className="font-archivo font-black text-[#0D0D0D]"
@@ -133,7 +133,7 @@ export default function ServiceDetail({ service, locale, nextService }: Props) {
             {service.tagline[locale]}
           </p>
           <p className="absolute top-5 left-5 md:top-7 md:left-7 font-mono text-[10px] text-[#0D0D0D] tracking-widest uppercase opacity-70">
-            // {service.slug}
+            {"// "}{service.slug}
           </p>
         </motion.div>
       </section>
@@ -147,7 +147,7 @@ export default function ServiceDetail({ service, locale, nextService }: Props) {
                 className="font-mono text-xs tracking-widest uppercase mb-8"
                 style={{ color: service.color === "#F2F0EB" ? "#0D0D0D" : service.color }}
               >
-                // {L.what}
+                {"// "}{L.what}
               </p>
               <h2
                 className="font-archivo font-black text-[#0D0D0D]"
@@ -196,7 +196,7 @@ export default function ServiceDetail({ service, locale, nextService }: Props) {
                   className="font-mono text-xs tracking-widest uppercase mb-8"
                   style={{ color: service.color }}
                 >
-                  // {L.process}
+                  {"// "}{L.process}
                 </p>
                 <h2
                   className="font-archivo font-black text-cream"
@@ -249,7 +249,7 @@ export default function ServiceDetail({ service, locale, nextService }: Props) {
                 className="font-mono text-xs tracking-widest uppercase mb-8"
                 style={{ color: service.color === "#F2F0EB" ? "#0D0D0D" : service.color }}
               >
-                // {L.deliverables}
+                {"// "}{L.deliverables}
               </p>
               <ul className="flex flex-col">
                 {service.deliverables[locale].map((d, i) => (
@@ -278,7 +278,7 @@ export default function ServiceDetail({ service, locale, nextService }: Props) {
                 className="font-mono text-xs tracking-widest uppercase mb-6"
                 style={{ color: service.color === "#F2F0EB" ? "#0D0D0D" : service.color }}
               >
-                // {L.idealFor}
+                {"// "}{L.idealFor}
               </p>
               <p
                 className="font-archivo font-black text-[#0D0D0D]"
