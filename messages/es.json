@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "work": "Work",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "cta": "Trabajemos juntos +"
+  },
+  "hero": {
+    "label": "// Partner estratégico",
+    "line1": "Tu partner",
+    "line2": "estratégico.",
+    "line3": "De la idea",
+    "line4": "a la escala.",
+    "sub": "Knock Labs combina marketing, tecnología, diseño y asesoramiento legal en un solo equipo. Para negocios que quieren escalar sin fragmentar proveedores.",
+    "cta1": "Trabajemos juntos +",
+    "cta2": "Ver proyectos"
+  },
+  "stats": {
+    "label": "// Por qué Knock Labs",
+    "items": [
+      { "value": "6", "suffix": "", "label": "Pilares de servicio" },
+      { "value": "360", "suffix": "°", "label": "Enfoque integral" },
+      { "value": "1", "suffix": "", "label": "Ventana, 6 disciplinas" }
+    ]
+  },
+  "process": {
+    "label": "// Cómo trabajamos",
+    "title": "Un proceso claro.",
+    "items": [
+      { "num": "01", "title": "Diagnóstico", "desc": "Auditamos tu situación actual y definimos una estrategia clara." },
+      { "num": "02", "title": "Propuesta", "desc": "Diseñamos un plan a medida con los pilares que necesitas." },
+      { "num": "03", "title": "Ejecución", "desc": "Nuestro equipo trabaja como una extensión del tuyo." },
+      { "num": "04", "title": "Escala", "desc": "Iteramos, medimos y crecemos contigo mes a mes." }
+    ]
+  },
+  "contact_cta": {
+    "label": "// Contacto",
+    "title": "¿Tienes un proyecto?",
+    "sub": "Hablemos.",
+    "cta": "Escribenos +"
+  },
+  "services": {
+    "label": "// Servicios",
+    "header1": "Seis pilares.",
+    "header2": "Un solo equipo.",
+    "items": [
+      {
+        "num": "01",
+        "title": "Marketing 360°",
+        "desc": "Estrategia digital, SEM, SEO, Social Ads, Growth Hacking.",
+        "tags": ["SEM", "SEO", "Social Ads", "Growth"]
+      },
+      {
+        "num": "02",
+        "title": "Tecnología",
+        "desc": "Webs, apps, SaaS, automatización e infraestructura cloud.",
+        "tags": ["Web", "Apps", "SaaS", "Cloud"]
+      },
+      {
+        "num": "03",
+        "title": "Legal & Economía",
+        "desc": "Asesoramiento legal, fiscal, modelado financiero y due diligence.",
+        "tags": ["Legal", "Fiscal", "Finanzas"]
+      },
+      {
+        "num": "04",
+        "title": "Aceleradora",
+        "desc": "Incubación, metodologías lean, conexión con inversores.",
+        "tags": ["Incubación", "Lean", "Inversores"]
+      },
+      {
+        "num": "05",
+        "title": "Diseño",
+        "desc": "Brand identity, UX/UI, design thinking y dirección creativa.",
+        "tags": ["Branding", "UX/UI", "Creativo"]
+      },
+      {
+        "num": "06",
+        "title": "Comunicación & IA",
+        "desc": "Contenidos, social media, automatización con IA.",
+        "tags": ["Contenido", "Social", "IA"]
+      }
+    ]
+  },
+  "work": {
+    "label": "// Proyectos",
+    "title": "Trabajo seleccionado",
+    "cta": "Ver todo el trabajo →"
+  },
+  "about": {
+    "label": "// Nosotros",
+    "line1": "No somos",
+    "line2": "una agencia.",
+    "line3": "Somos tu equipo.",
+    "body": "Knock Labs nació en Barcelona con una idea simple: los negocios que quieren escalar merecen un equipo integral, sin fragmentación ni contratos interminables. Combinamos seis disciplinas bajo un mismo techo para que puedas centrarte en lo que importa — hacer crecer tu negocio.",
+    "cta": "Conoce al equipo →",
+    "values_label": "// Principios",
+    "team_label": "// Equipo"
+  },
+  "contact": {
+    "label": "// Contacto",
+    "title": "Cuéntanos tu proyecto.",
+    "sub": "Sin compromisos. Sin contratos largos. Solo una conversación.",
+    "cta": "Enviar +",
+    "fields": {
+      "name": "Nombre *",
+      "email": "Email *",
+      "company": "Empresa",
+      "message": "Cuéntanos tu proyecto... *"
+    },
+    "success_title": "Mensaje recibido.",
+    "success_sub": "Te escribimos pronto.",
+    "success_reset": "Enviar otro →",
+    "error": "Algo salió mal. Escríbenos directamente.",
+    "sending": "Enviando...",
+    "info": {
+      "email": "hola@knocklabs.com",
+      "location": "Barcelona, España",
+      "response": "En menos de 24 horas."
+    },
+    "consent": "He leído y acepto la <link>política de privacidad</link>.",
+    "consent_error": "Debes aceptar la política de privacidad."
+  },
+  "footer": {
+    "tagline": "Marketing que mueve el negocio.",
+    "pages": "Páginas",
+    "links": {
+      "work": "Work",
+      "services": "Servicios",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "legal": "© 2025 Knock Labs. Todos los derechos reservados.",
+    "location": "Barcelona, España",
+    "email": "hola@knocklabs.com",
+    "legal_links": {
+      "legal": "Aviso Legal",
+      "privacy": "Privacidad",
+      "cookies": "Cookies"
+    }
+  },
+  "about_extended": {
+    "contact_label": "Contacto",
+    "values": [
+      { "num": "01", "title": "Sin fragmentación", "desc": "Un solo equipo que habla entre sí. Sin coordinar cinco proveedores distintos." },
+      { "num": "02", "title": "Involucración real", "desc": "Nos metemos de lleno en cada proyecto como si fuera nuestro negocio." },
+      { "num": "03", "title": "Resultados, no informes", "desc": "El informe es una consecuencia. Lo que importa es el impacto en tu negocio." }
+    ],
+    "team": [
+      { "name": "Pablo V.", "role": "Estrategia & Dirección", "mono": "CEO / Founder" },
+      { "name": "Equipo en expansión", "role": "Disciplinas integradas", "mono": "Growth · Creative · Legal" }
+    ]
+  },
+  "services_intro": {
+    "title1": "Marketing. Tecnología.",
+    "title2": "Legal. Diseño.",
+    "title3": "Todo en un equipo.",
+    "body": "No vendemos paquetes cerrados. Armamos el equipo que tu proyecto necesita a partir de seis pilares que trabajan coordinados bajo un mismo techo."
+  }
+}
