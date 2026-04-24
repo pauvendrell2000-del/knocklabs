@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
 
 const schema = z.object({
   name: z.string().min(1).max(100),
@@ -71,6 +71,13 @@ export async function POST(req: NextRequest) {
   const safeName = escapeHtml(name);
   const safeCompany = company ? escapeHtml(company) : null;
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br/>");
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error("[contact] Missing RESEND_API_KEY");
+    return NextResponse.json({ error: "Server not configured" }, { status: 500 });
+  }
+  const resend = new Resend(apiKey);
 
   try {
     const { error } = await resend.emails.send({
