@@ -81,8 +81,8 @@ export async function POST(req: NextRequest) {
 
   try {
     const { error } = await resend.emails.send({
-      from: "Knock Labs <noreply@knocklabs.com>",
-      to: ["hola@knocklabs.com"],
+      from: "Knock Labs <noreply@knocklabs.es>",
+      to: ["hola@knocklabs.es"],
       replyTo: email,
       subject: `Nuevo mensaje de ${safeName}${safeCompany ? ` (${safeCompany})` : ""}`,
       html: `
