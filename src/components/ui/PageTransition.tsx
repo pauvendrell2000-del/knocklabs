@@ -6,8 +6,14 @@ import { usePathname } from "next/navigation";
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
+  const resetScroll = () => {
+    const lenis = window.__lenis;
+    if (lenis) lenis.scrollTo(0, { immediate: true, force: true });
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+  };
+
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" onExitComplete={resetScroll}>
       <motion.div
         key={pathname}
         initial={{ opacity: 0, y: 16 }}

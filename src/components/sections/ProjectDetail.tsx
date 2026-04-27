@@ -13,7 +13,7 @@ type Props = { project: Project; locale: "es" | "en"; nextProject?: Project };
 function ImageSlot({ folder, file, alt }: { folder?: string; file: string; alt: string }) {
   const src = folder ? `/images/projects/${folder}/${file}` : "";
   return src ? (
-    <Image src={src} alt={alt} fill className="object-cover" />
+    <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 1280px, 100vw" className="object-contain" />
   ) : (
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#0D0D0D]/5">
       <p className="font-mono text-xs text-[#0D0D0D]/30 tracking-widest">imagen pendiente</p>

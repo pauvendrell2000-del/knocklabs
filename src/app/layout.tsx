@@ -19,29 +19,67 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://knocklabs.es"),
   title: {
-    default: "Knock Labs — Agencia de Marketing 360°",
+    default: "Knock Labs — Agencia de Marketing 360° en Barcelona",
     template: "%s | Knock Labs",
   },
   description:
-    "Agencia de marketing estratégico y consultoría integral en Barcelona. Marketing, tecnología, diseño y asesoramiento legal en un solo equipo.",
-  keywords: ["agencia marketing", "marketing 360", "branding", "SEO", "SEM", "Barcelona", "diseño web"],
+    "Agencia de marketing 360° en Barcelona: branding, SEO/SEM, desarrollo web, diseño y consultoría legal en un solo equipo. Partner estratégico para empresas en Barcelona y toda España.",
+  keywords: [
+    "agencia marketing Barcelona",
+    "agencia marketing 360",
+    "agencia SEO Barcelona",
+    "agencia SEM Barcelona",
+    "branding Barcelona",
+    "diseño web Barcelona",
+    "desarrollo web Barcelona",
+    "consultoría legal Barcelona",
+    "marketing digital Barcelona",
+    "agencia creativa Barcelona",
+    "marketing 360 España",
+    "Knock Labs",
+  ],
   authors: [{ name: "Knock Labs" }],
   creator: "Knock Labs",
+  publisher: "Knock Labs",
   openGraph: {
     siteName: "Knock Labs",
     type: "website",
     locale: "es_ES",
     alternateLocale: "en_US",
+    url: "https://knocklabs.es",
+    title: "Knock Labs — Agencia de Marketing 360° en Barcelona",
+    description:
+      "Branding, SEO/SEM, desarrollo web, diseño y legal en un solo equipo. Tu partner 360° en Barcelona.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Knock Labs — Agencia de Marketing 360° en Barcelona",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     creator: "@knocklabs",
+    title: "Knock Labs — Agencia de Marketing 360° en Barcelona",
+    description:
+      "Branding, SEO/SEM, desarrollo web, diseño y legal en un solo equipo. Tu partner 360° en Barcelona.",
+    images: ["/og.png"],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
+  alternates: {
+    canonical: "https://knocklabs.es",
+    languages: {
+      "es-ES": "https://knocklabs.es/es",
+      "en-US": "https://knocklabs.es/en",
+    },
+  },
+  category: "business",
 };
 
 export const viewport: Viewport = {
@@ -52,18 +90,39 @@ export const viewport: Viewport = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+  "@id": "https://knocklabs.es/#organization",
   name: "Knock Labs",
-  url: "https://knocklabs.com",
-  email: "hola@knocklabs.com",
-  logo: "https://knocklabs.com/icon.png",
+  url: "https://knocklabs.es",
+  email: "hola@knocklabs.es",
+  logo: "https://knocklabs.es/icon.png",
+  image: "https://knocklabs.es/og.png",
   description:
-    "Partner estratégico integral: marketing, tecnología, diseño y asesoramiento legal en un solo equipo.",
+    "Agencia de marketing 360° en Barcelona: branding, SEO/SEM, desarrollo web, diseño y consultoría legal en un solo equipo.",
+  priceRange: "€€",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Barcelona",
+    addressRegion: "Cataluña",
     addressCountry: "ES",
   },
+  areaServed: [
+    { "@type": "City", name: "Barcelona" },
+    { "@type": "AdministrativeArea", name: "Cataluña" },
+    { "@type": "Country", name: "España" },
+  ],
+  knowsAbout: [
+    "Marketing 360",
+    "Branding",
+    "SEO",
+    "SEM",
+    "Diseño web",
+    "Desarrollo web",
+    "Consultoría legal",
+    "Comunicación",
+    "Inteligencia artificial aplicada",
+  ],
+  inLanguage: ["es", "en"],
   sameAs: [],
 };
 
