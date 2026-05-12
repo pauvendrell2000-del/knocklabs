@@ -117,7 +117,7 @@ export const projects: Project[] = [
         value: "+340%",
       },
     ],
-    nextSlug: "moltamerda",
+    nextSlug: "smartclinity",
     imageFolder: "FCC",
   },
   {
@@ -167,7 +167,6 @@ export const projects: Project[] = [
     ],
     nextSlug: "moltamerda",
     imageFolder: "Smartclinity",
-    hidden: true,
   },
   {
     slug: "moltamerda",
