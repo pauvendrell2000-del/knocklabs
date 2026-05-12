@@ -68,7 +68,7 @@ export default function AboutTeaser() {
 
               {/* Location tag */}
               <div className="absolute bottom-6 left-6">
-                <p className="font-mono text-[10px] text-cream/20 tracking-widest uppercase">Madrid, Spain</p>
+                <p className="font-mono text-[10px] text-cream/20 tracking-widest uppercase">Barcelona, España</p>
               </div>
 
               {/* Pulse dot */}
