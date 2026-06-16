@@ -2,10 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const DURATION = 1200;
 
 export default function Loader() {
+  const pathname = usePathname();
+  const barColor = pathname?.includes("/knockvision") ? "#6EC1E4" : "#FF4C00";
+
   const [visible, setVisible] = useState(false);
   const initialized = useRef(false);
 
@@ -45,7 +49,8 @@ export default function Loader() {
           </div>
 
           <motion.div
-            className="absolute bottom-0 left-0 h-[2px] bg-accent"
+            className="absolute bottom-0 left-0 h-[2px]"
+            style={{ backgroundColor: barColor }}
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: DURATION / 1000, ease: [0.65, 0, 0.35, 1] }}

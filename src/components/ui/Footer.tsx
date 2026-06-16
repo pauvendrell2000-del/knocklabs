@@ -55,7 +55,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact */}
+          {/* Contact + Knockvision cross-link */}
           <div className="md:col-span-3">
             <p className="font-mono text-[10px] text-cream/20 tracking-widest uppercase mb-5">{t("location")}</p>
             <a
@@ -65,6 +65,16 @@ export default function Footer() {
             >
               {t("email")}
             </a>
+            <div className="mt-8">
+              <p className="font-mono text-[10px] text-cream/20 tracking-widest uppercase mb-5">Depts.</p>
+              <Link
+                href={`/${locale}/knockvision`}
+                className="nav-underline text-cream/40 hover:text-cream font-archivo text-sm transition-colors duration-200 pb-px w-fit flex items-center gap-1.5"
+                style={{ letterSpacing: "-0.02em" }}
+              >
+                Knockvision ↗
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -12,6 +12,7 @@ const config: Config = {
         base: "#0D0D0D",
         cream: "#F2F0EB",
         accent: "#FF4C00",
+        "kv-accent": "#6EC1E4",
         dark01: "#1A1A1A",
         dark02: "#2A2A2A",
       },

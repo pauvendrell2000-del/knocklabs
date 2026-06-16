@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProjectBySlug(params.slug);
   if (!project) return {};
   const locale = params.locale as "es" | "en";
-  const title = `${project.name[locale]} — ${project.client} | Knock Labs`;
+  const title = `${project.name[locale]} | Knock Labs`;
   const description =
     locale === "es"
       ? project.challenge.es.slice(0, 155)

@@ -62,7 +62,6 @@ export default function WorkPreview() {
                     >
                       {project.name[locale]}
                     </h3>
-                    <p className="font-mono text-[11px] text-cream/30 tracking-wide mt-1.5">{project.client}</p>
                   </div>
                 </div>
 
@@ -77,7 +76,6 @@ export default function WorkPreview() {
                       </span>
                     ))}
                   </div>
-                  <span className="font-mono text-[11px] text-cream/25">{project.year}</span>
                   <span className="text-cream/15 text-lg group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
                     ↗
                   </span>

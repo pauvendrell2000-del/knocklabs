@@ -20,6 +20,9 @@
 .DS_Store
 *.pem
 
+# knockvision source originals (heavy PNGs — only optimized webp in public/ are committed)
+/Knockvision/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

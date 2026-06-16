@@ -157,5 +157,108 @@
     "title2": "Legal. Design.",
     "title3": "All in one team.",
     "body": "We don't sell packaged bundles. We assemble the team your project needs from six pillars working together under one roof."
+  },
+  "knockvision": {
+    "nav": {
+      "projects": "Projects",
+      "architecture": "Architecture",
+      "product": "Product",
+      "contact": "Contact"
+    },
+    "hero": {
+      "label": "A visual rendering studio",
+      "line1": "Images",
+      "line2": "that make projects",
+      "line3": "visible before they exist.",
+      "sub": "Architectural visualization, product rendering and 3D campaign imagery for studios, brands and spaces.",
+      "descriptor": "Knockvision · by Knocklabs"
+    },
+    "services": {
+      "label": "Services"
+    },
+    "byKnocklabs": {
+      "label": "Studio",
+      "body": "Knockvision is the premium visualization department of Knocklabs. We work with studios, brands and developers that demand precision, art direction and a final image that communicates before anything is built.",
+      "cta": "Visit Knocklabs"
+    },
+    "recent": {
+      "label": "Recent work",
+      "cta": "See all projects"
+    },
+    "categories": {
+      "label": "Categories",
+      "cta": "Explore"
+    },
+    "manifesto": {
+      "label": "Manifesto",
+      "body": "A well-directed image convinces faster than any rushed render."
+    },
+    "process": {
+      "label": "Process",
+      "title": "Brief · Direction · Production · Delivery",
+      "steps": {
+        "brief": { "title": "Brief", "desc": "We understand the project, its scale and its tone before modeling anything." },
+        "direction": { "title": "Direction", "desc": "We define cameras, light, materials and editorial references." },
+        "production": { "title": "Production", "desc": "Modeling, materials, lighting and final composition." },
+        "delivery": { "title": "Delivery", "desc": "Deliverables ready for campaign, web, press or investors." }
+      }
+    },
+    "finalCta": {
+      "label": "Contact",
+      "title": "Ready to see the project before it is built?",
+      "primary": "Request a render",
+      "secondary": "See projects"
+    },
+    "footer": {
+      "claim": "Images that make projects visible before they exist.",
+      "descriptor": "A visual rendering studio for architecture, product and 3D campaigns. A department of Knocklabs.",
+      "explore": "Explore",
+      "studio": "Studio",
+      "legal": "Legal Notice",
+      "privacy": "Privacy",
+      "cookies": "Cookies"
+    },
+    "projectsPage": {
+      "label": "Projects",
+      "title": "Selected work.",
+      "count": "projects",
+      "filterBy": "Filter",
+      "all": "All",
+      "empty": "No projects in this category yet."
+    },
+    "projectDetail": {
+      "credits": "Credits",
+      "next": "Next project"
+    },
+    "servicePage": {
+      "relatedWork": "Related work",
+      "capabilities": "Capabilities",
+      "architecture": {
+        "title": "Architectural visualization.",
+        "intro": "Exterior and interior renders for housing, offices, hospitality and singular spaces. We partner with studios and developers at competition, pre-sale and communication stages."
+      },
+      "product": {
+        "title": "Premium product rendering.",
+        "intro": "3D visualization for launches, campaigns and e-commerce. Accurate materials, editorial art direction and production-ready deliverables."
+      }
+    },
+    "contactPage": {
+      "label": "Contact",
+      "title": "Tell us about your project.",
+      "name": "Name",
+      "email": "Email",
+      "company": "Studio / Brand",
+      "projectType": "Project type",
+      "message": "Message",
+      "submit": "Send +",
+      "sending": "Sending...",
+      "ok": "Message received. We'll be in touch shortly.",
+      "error": "Something went wrong. Please try again.",
+      "typeArch": "Architectural Visualization",
+      "typeProduct": "Product Rendering",
+      "typeInterior": "Interior & Retail",
+      "typeCampaign": "Campaign Imagery",
+      "typeAi": "AI + 3D Workflow"
+    }
   }
 }

@@ -11,6 +11,8 @@ const schema = z.object({
   message: z.string().min(10).max(5000),
   website: z.string().max(0).optional(), // honeypot
   elapsed: z.number().optional(),
+  source: z.enum(["knocklabs", "knockvision"]).optional(),
+  projectType: z.string().max(100).optional(),
 });
 
 // Simple in-memory rate limiter: 3 submissions per IP per minute
@@ -56,7 +58,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid fields" }, { status: 400 });
   }
 
-  const { name, email, company, message, website, elapsed } = parsed.data;
+  const { name, email, company, message, website, elapsed, source, projectType } = parsed.data;
 
   // Honeypot check
   if (website && website.length > 0) {
@@ -71,6 +73,11 @@ export async function POST(req: NextRequest) {
   const safeName = escapeHtml(name);
   const safeCompany = company ? escapeHtml(company) : null;
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br/>");
+  const isKnockvision = source === "knockvision";
+  const safeProjectType = projectType ? escapeHtml(projectType) : null;
+  const emailSubject = isKnockvision
+    ? `[Knockvision] ${safeProjectType ? `${safeProjectType} — ` : ""}${safeName}${safeCompany ? ` (${safeCompany})` : ""}`
+    : `Nuevo mensaje de ${safeName}${safeCompany ? ` (${safeCompany})` : ""}`;
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -84,14 +91,18 @@ export async function POST(req: NextRequest) {
       from: "Knock Labs <noreply@knocklabs.es>",
       to: ["hola@knocklabs.es"],
       replyTo: email,
-      subject: `Nuevo mensaje de ${safeName}${safeCompany ? ` (${safeCompany})` : ""}`,
+      subject: emailSubject,
       html: `
         <div style="font-family:monospace;max-width:600px;margin:0 auto;padding:32px;background:#0D0D0D;color:#F2F0EB;">
-          <h2 style="color:#FF4C00;letter-spacing:-0.02em;margin-bottom:24px;">Nuevo contacto — Knock Labs</h2>
+          <h2 style="color:${isKnockvision ? "#F2F0EB" : "#FF4C00"};letter-spacing:-0.02em;margin-bottom:6px;">
+            ${isKnockvision ? "Nuevo contacto — Knockvision" : "Nuevo contacto — Knock Labs"}
+          </h2>
+          ${isKnockvision ? `<p style="color:#888;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:24px;">A visual rendering studio by Knocklabs</p>` : "<br/>"}
           <table style="width:100%;border-collapse:collapse;">
             <tr><td style="padding:8px 0;color:#888;font-size:12px;">NOMBRE</td><td style="padding:8px 0;">${safeName}</td></tr>
             <tr><td style="padding:8px 0;color:#888;font-size:12px;">EMAIL</td><td style="padding:8px 0;">${escapeHtml(email)}</td></tr>
-            ${safeCompany ? `<tr><td style="padding:8px 0;color:#888;font-size:12px;">EMPRESA</td><td style="padding:8px 0;">${safeCompany}</td></tr>` : ""}
+            ${safeCompany ? `<tr><td style="padding:8px 0;color:#888;font-size:12px;">ESTUDIO / MARCA</td><td style="padding:8px 0;">${safeCompany}</td></tr>` : ""}
+            ${safeProjectType ? `<tr><td style="padding:8px 0;color:#888;font-size:12px;">TIPO DE PROYECTO</td><td style="padding:8px 0;">${safeProjectType}</td></tr>` : ""}
           </table>
           <hr style="border:none;border-top:1px solid #2A2A2A;margin:24px 0;" />
           <p style="line-height:1.6;color:#F2F0EB;">${safeMessage}</p>

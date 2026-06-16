@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="480" height="80">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&amp;display=swap');
+    </style>
+  </defs>
+  <!-- Background: cream -->
+  <rect width="480" height="80" fill="#F2F0EB"/>
+  <!-- KNOCK LABS wordmark -->
+  <text
+    x="24"
+    y="58"
+    font-family="Archivo, sans-serif"
+    font-weight="900"
+    font-size="52"
+    fill="#0D0D0D"
+    text-anchor="start"
+    dominant-baseline="auto"
+    letter-spacing="-0.035em"
+  >KNOCK LABS</text>
+</svg>

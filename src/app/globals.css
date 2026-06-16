@@ -84,7 +84,25 @@ body {
   transform: scaleX(1);
 }
 
-/* Grain overlay */
+/* ── Knockvision utilities ─────────────────────────── */
+
+/* Main viewport scrollbar on Knockvision pages: Gulf Blue */
+html.kv-page::-webkit-scrollbar-thumb {
+  background: #6EC1E4;
+}
+
+/* Scrollbar inside knockvision sections: Gulf Blue */
+.kv-root ::-webkit-scrollbar-thumb {
+  background: #6EC1E4;
+}
+
+/* Selection inside Knockvision */
+.kv-root ::selection {
+  background-color: #1A1A1A;
+  color: #F2F0EB;
+}
+
+/* ── Grain overlay */
 body::after {
   content: "";
   position: fixed;

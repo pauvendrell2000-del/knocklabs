@@ -89,16 +89,8 @@ function ProjectCard({
             ))}
           </div>
 
-          {/* Year top-right */}
-          <span className="absolute top-7 right-7 md:top-10 md:right-10 font-mono text-[10px] text-cream/20 tracking-widest">
-            {project.year}
-          </span>
-
           {/* Main info */}
           <div className="flex flex-col gap-1 mb-4">
-            <p className="font-mono text-[10px] text-cream/30 tracking-widest uppercase">
-              {project.client}
-            </p>
             <h2
               className="font-archivo font-black text-cream transition-colors duration-300"
               style={{

@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function CustomCursor() {
+  const pathname = usePathname();
+  const isKv = pathname?.includes("/knockvision");
+  const dotColor = isKv ? "#6EC1E4" : "#FF4C00";
+
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [dot, setDot] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -52,8 +57,8 @@ export default function CustomCursor() {
     <>
       {/* Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-accent pointer-events-none z-[10000]"
-        style={{ x: dot.x - 3, y: dot.y - 3 }}
+        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full pointer-events-none z-[10000]"
+        style={{ x: dot.x - 3, y: dot.y - 3, backgroundColor: dotColor }}
       />
       {/* Circle */}
       <motion.div

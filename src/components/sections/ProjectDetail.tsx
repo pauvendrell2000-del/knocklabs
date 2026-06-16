@@ -27,9 +27,6 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
 
   const L = {
     es: {
-      client: "Cliente",
-      year: "Año",
-      services: "Servicios",
       duration: "Duración",
       challenge: "El reto",
       solution: "La solución",
@@ -40,9 +37,6 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
       overview: "Overview",
     },
     en: {
-      client: "Client",
-      year: "Year",
-      services: "Services",
       duration: "Duration",
       challenge: "The challenge",
       solution: "The solution",
@@ -55,10 +49,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
   }[locale];
 
   const meta = [
-    { label: L.services, value: project.services[locale].join(" · ") },
     { label: L.duration, value: project.duration[locale] },
-    { label: L.year, value: project.year },
-    { label: L.client, value: project.client },
   ];
 
   return (
@@ -99,17 +90,8 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
                   letterSpacing: "-0.04em",
                 }}
               >
-                {project.client}
+                {project.name[locale]}
               </h1>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <p
-                className="font-archivo text-[#0D0D0D]/60 text-lg md:text-xl"
-                style={{ letterSpacing: "-0.015em", maxWidth: "46ch", lineHeight: 1.4 }}
-              >
-                {project.name[locale]}.
-              </p>
             </ScrollReveal>
           </div>
 
@@ -154,7 +136,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
           <ImageSlot
             folder={project.imageFolder}
             file="hero.png"
-            alt={`${project.client} — hero`}
+            alt={`${project.name[locale]} — hero`}
           />
         </motion.div>
       </section>
@@ -205,7 +187,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
               <ImageSlot
                 folder={project.imageFolder}
                 file="imagen1.png"
-                alt={`${project.client} — imagen 1`}
+                alt={`${project.name[locale]} — imagen 1`}
               />
             </div>
           </ScrollReveal>
@@ -214,7 +196,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
               <ImageSlot
                 folder={project.imageFolder}
                 file="imagen2.png"
-                alt={`${project.client} — imagen 2`}
+                alt={`${project.name[locale]} — imagen 2`}
               />
             </div>
           </ScrollReveal>
@@ -266,7 +248,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
             <ImageSlot
               folder={project.imageFolder}
               file="portada.png"
-              alt={`${project.client} — portada`}
+              alt={`${project.name[locale]} — portada`}
             />
           </div>
         </ScrollReveal>
@@ -346,11 +328,8 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
                     lineHeight: 0.92,
                   }}
                 >
-                  {nextProject.client}
-                </h3>
-                <p className="font-mono text-[10px] text-[#0D0D0D]/40 mt-4 tracking-widest uppercase">
                   {nextProject.name[locale]}
-                </p>
+                </h3>
               </div>
               <motion.span
                 className="font-archivo font-black text-[#0D0D0D]/20 group-hover:text-[#0D0D0D] transition-colors duration-300 shrink-0"

@@ -5,11 +5,8 @@ export type Project = {
   slug: string;
   num: string;
   name: { es: string; en: string };
-  client: string;
   tags: string[];
-  year: string;
   color: string;
-  services: { es: string[]; en: string[] };
   duration: { es: string; en: string };
   challenge: { es: string; en: string };
   solution: { es: string; en: string };
@@ -24,26 +21,8 @@ export const projects: Project[] = [
     slug: "sh-000-es",
     num: "01",
     name: { es: "SH-000-ES", en: "SH-000-ES" },
-    client: "SH-000-ES",
     tags: ["Branding", "eCommerce", "Apps Ad-hoc", "Estrategia"],
-    year: "2026",
     color: "#C8B99A",
-    services: {
-      es: [
-        "Creación de marca desde cero",
-        "Branding completo",
-        "Web con tienda online",
-        "Sistema de drops",
-        "Aplicaciones ad-hoc a medida",
-      ],
-      en: [
-        "Brand creation from scratch",
-        "Full branding",
-        "Web with online store",
-        "Drops system",
-        "Custom ad-hoc applications",
-      ],
-    },
     duration: { es: "En desarrollo", en: "In development" },
     challenge: {
       es: "SH-000-ES es una empresa de fabricación de zapatos 3D para el segmento de lujo que llegó sin marca, sin presencia digital y con un producto altamente innovador difícil de comunicar. El reto era construir una identidad premium desde cero, lanzar la web y desarrollar herramientas digitales específicas que respondieran a las necesidades únicas del negocio.",
@@ -74,26 +53,8 @@ export const projects: Project[] = [
     slug: "fcc-fresh-car",
     num: "02",
     name: { es: "FCC — Fresh Car Cpt.", en: "FCC — Fresh Car Cpt." },
-    client: "FCC — Fresh Car Cpt.",
     tags: ["Rebranding", "Web", "SEO", "GEO"],
-    year: "2026",
     color: "#B8A06A",
-    services: {
-      es: [
-        "Rebranding completo",
-        "Diseño y desarrollo web",
-        "Portal de reservas integrado",
-        "Gestión de redes sociales",
-        "SEO y GEO local",
-      ],
-      en: [
-        "Full rebranding",
-        "Web design & development",
-        "Integrated booking portal",
-        "Social media management",
-        "Local SEO & GEO",
-      ],
-    },
     duration: { es: "6 semanas", en: "6 weeks" },
     challenge: {
       es: "FCC contaba con una identidad visual desactualizada y escasa presencia digital en un mercado donde la primera impresión lo es todo. Necesitaban una renovación integral que transmitiera el nivel premium de sus servicios, les posicionara localmente y convirtiera la web en un canal real de captación de clientes con reservas online.",
@@ -124,24 +85,8 @@ export const projects: Project[] = [
     slug: "smartclinity",
     num: "03",
     name: { es: "Smartclinity", en: "Smartclinity" },
-    client: "Smartclinity",
     tags: ["Branding", "Estrategia", "Go-to-Market", "Pitch Deck"],
-    year: "2026",
     color: "#00A878",
-    services: {
-      es: [
-        "Identidad visual completa",
-        "Posicionamiento de marca clínica",
-        "Estrategia go-to-market B2B",
-        "Campañas segmentadas por perfil de cliente",
-      ],
-      en: [
-        "Full visual identity",
-        "Clinical brand positioning",
-        "B2B go-to-market strategy",
-        "Segmented campaigns by customer profile",
-      ],
-    },
     duration: { es: "6 semanas", en: "6 weeks" },
     challenge: {
       es: "SmartClinity es una startup de hardware y software médico que desarrolla un sistema de monitorización continua de fluidos clínicos — sensores externos, conectividad, dashboards y alertas — para reducir las revisiones manuales en entornos hospitalarios. Tenían tecnología sólida pero sin identidad de marca, sin posicionamiento claro y sin material capaz de generar confianza en decisores clínicos, departamentos de innovación hospitalaria e inversores.",
@@ -172,22 +117,8 @@ export const projects: Project[] = [
     slug: "moltamerda",
     num: "04",
     name: { es: "Moltamerda", en: "Moltamerda" },
-    client: "Moltamerda",
     tags: ["Web", "Portal de Reservas", "UX/UI"],
-    year: "2026",
     color: "#4F46E5",
-    services: {
-      es: [
-        "Diseño web completo",
-        "Desarrollo frontend",
-        "Sistema de reservas integrado",
-      ],
-      en: [
-        "Full web design",
-        "Frontend development",
-        "Integrated booking system",
-      ],
-    },
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
       es: "Cliente que necesitaba una presencia web profesional con capacidad para gestionar reservas de forma autónoma. El proyecto requería una solución funcional, intuitiva y lista para entregar al cliente final.",
@@ -218,24 +149,8 @@ export const projects: Project[] = [
     slug: "team-espadas",
     num: "05",
     name: { es: "Team Espadas", en: "Team Espadas" },
-    client: "Team Espadas",
     tags: ["Branding", "Estrategia", "Desarrollo de Negocio"],
-    year: "2026",
     color: "#FF6B35",
-    services: {
-      es: [
-        "Creación de marca desde cero",
-        "Branding completo",
-        "Modelo de negocio",
-        "Estrategia de crecimiento",
-      ],
-      en: [
-        "Brand creation from scratch",
-        "Full branding",
-        "Business model",
-        "Growth strategy",
-      ],
-    },
     duration: { es: "3 semanas", en: "3 weeks" },
     challenge: {
       es: "Team Espadas es un club de boxeo olímpico con fuerte vocación social fundado por Paco Espadas en Esparraguera. Con más de 40 años de trayectoria en el deporte, necesitaban transformar su proyecto en una marca profesional con un modelo de negocio claro y escalable, capaz de atraer patrocinadores, subvenciones y socios estratégicos.",
