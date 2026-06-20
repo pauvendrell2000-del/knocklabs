@@ -91,8 +91,8 @@ export const projects: Project[] = [
       en: "Full rebranding of FCC. A new black-and-gold identity with a proprietary geometric pattern, as refined as their finishes, applied across a stationery and brand system: folders, business cards, envelopes, keyrings, air freshener and packaging. An image worthy of a high-end service.",
     },
     results: [
+      { label: { es: "Piezas del sistema de marca", en: "Brand system pieces" }, value: "6+" },
       { label: { es: "Identidad", en: "Identity" }, value: "Negro & Oro" },
-      { label: { es: "Sistema de papelería", en: "Stationery system" }, value: "Completo" },
       { label: { es: "Posicionamiento", en: "Positioning" }, value: "Premium" },
     ],
     nextSlug: "fcc-local",
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     },
     results: [
       { label: { es: "Experiencia de marca", en: "Brand experience" }, value: "Showroom" },
-      { label: { es: "Coherencia", en: "Consistency" }, value: "Aplicada al espacio" },
+      { label: { es: "Identidad aplicada", en: "Identity applied" }, value: "360°" },
       { label: { es: "Percepción", en: "Perception" }, value: "Alta gama" },
     ],
     nextSlug: "argenpastry-web",
@@ -139,8 +139,8 @@ export const projects: Project[] = [
     },
     results: [
       { label: { es: "Tienda online", en: "Online store" }, value: "eCommerce" },
+      { label: { es: "Dispositivos", en: "Devices" }, value: "Desktop · Tablet · Mobile" },
       { label: { es: "Experiencia", en: "Experience" }, value: "100% responsive" },
-      { label: { es: "Colecciones de temporada", en: "Seasonal collections" }, value: "Sí" },
     ],
     nextSlug: "argenpastry-foto",
     imageFolder: "ArgenpastryWeb",
@@ -162,9 +162,9 @@ export const projects: Project[] = [
       en: "Product photography library for Argenpastry: alfajores (white, dark, cornstarch and triple chocolate), empanadas and assorted facturas. We developed the art direction and a proprietary visual system —overhead still lifes, collection layouts and campaign banners— on warm backgrounds that enhance texture and craving. Every shot is built to sell. In collaboration with MRRipley.",
     },
     results: [
-      { label: { es: "Banco de fotografía propio", en: "Proprietary photo library" }, value: "40+" },
-      { label: { es: "Cobertura de catálogo", en: "Catalogue coverage" }, value: "Full" },
-      { label: { es: "Listo para", en: "Ready for" }, value: "eCommerce · RRSS" },
+      { label: { es: "Fotografías de producto", en: "Product photos" }, value: "40+" },
+      { label: { es: "Líneas de producto", en: "Product lines" }, value: "Alfajores · Empanadas · Facturas" },
+      { label: { es: "Listo para", en: "Ready for" }, value: "eCommerce · RRSS · Campañas" },
     ],
     nextSlug: "yucahu-web",
     imageFolder: "ArgenpastryFoto",
@@ -186,7 +186,7 @@ export const projects: Project[] = [
     },
     results: [
       { label: { es: "Tienda online", en: "Online store" }, value: "eCommerce" },
-      { label: { es: "Trazabilidad por producto", en: "Per-product traceability" }, value: "Full" },
+      { label: { es: "Trazabilidad por lote", en: "Per-batch traceability" }, value: "Origen · Altitud · Variedad" },
       { label: { es: "Experiencia", en: "Experience" }, value: "100% responsive" },
     ],
     nextSlug: "yucahu-packaging",
@@ -210,8 +210,8 @@ export const projects: Project[] = [
     },
     results: [
       { label: { es: "Origen único trazado", en: "Single origin traced" }, value: "1.200m · Typica" },
-      { label: { es: "Sistema de packaging", en: "Packaging system" }, value: "Full line" },
-      { label: { es: "Posicionamiento", en: "Positioning" }, value: "Premium" },
+      { label: { es: "Sistema de packaging", en: "Packaging system" }, value: "Línea completa" },
+      { label: { es: "Posicionamiento", en: "Positioning" }, value: "Premium internacional" },
     ],
     nextSlug: "pastisseria-sala",
     imageFolder: "YucahuPackaging",
@@ -235,7 +235,7 @@ export const projects: Project[] = [
     results: [
       { label: { es: "Herencia activada", en: "Heritage activated" }, value: "1867" },
       { label: { es: "Sistema de marca", en: "Brand system" }, value: "360°" },
-      { label: { es: "Coherencia en cada punto de contacto", en: "Coherence at every touchpoint" }, value: "100%" },
+      { label: { es: "Puntos de contacto", en: "Touchpoints" }, value: "Packaging · Retail · Uniformes" },
     ],
     nextSlug: "moltamerda",
     imageFolder: "PastisseriaSala",
