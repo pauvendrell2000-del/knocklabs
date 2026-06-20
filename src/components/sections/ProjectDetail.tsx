@@ -9,6 +9,15 @@ import { projectBlur } from "@/data/project-blur";
 
 const TOTAL_PROJECTS = String(projects.filter((p) => !p.hidden).length).padStart(2, "0");
 
+// Escala la tipografía del valor de cada resultado según su longitud:
+// valores cortos ("-90%", "96/100") grandes; frases largas, más pequeñas.
+function resultValueStyle(value: string): { fontSize: string; lineHeight: number } {
+  const len = value.length;
+  if (len <= 9) return { fontSize: "clamp(2.75rem, 6vw, 5rem)", lineHeight: 0.9 };
+  if (len <= 16) return { fontSize: "clamp(1.6rem, 3.4vw, 2.5rem)", lineHeight: 1 };
+  return { fontSize: "clamp(1.15rem, 2.2vw, 1.6rem)", lineHeight: 1.15 };
+}
+
 const EASE = [0.65, 0, 0.35, 1] as [number, number, number, number];
 
 type Props = { project: Project; locale: "es" | "en"; nextProject?: Project };
@@ -302,12 +311,11 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
                     0{i + 1}
                   </p>
                   <span
-                    className="font-archivo font-black"
+                    className="font-archivo font-black break-words"
                     style={{
-                      fontSize: "clamp(3rem, 6.5vw, 5.5rem)",
+                      ...resultValueStyle(result.value),
                       color: project.color,
-                      letterSpacing: "-0.045em",
-                      lineHeight: 0.9,
+                      letterSpacing: "-0.035em",
                     }}
                   >
                     {result.value}
