@@ -38,7 +38,7 @@ function ProjectCard({
   return (
     <Link href={`/${locale}/work/${project.slug}`}>
       <motion.div
-        className={`relative overflow-hidden cursor-pointer ${layout[index].rows} bg-dark01 group`}
+        className={`relative overflow-hidden cursor-pointer ${layout[index % layout.length].rows} bg-dark01 group`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         initial={{ opacity: 0, y: 32 }}
@@ -181,7 +181,7 @@ export default function WorkContent() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             {[
-              { v: "11", l: locale === "es" ? "Proyectos" : "Projects" },
+              { v: String(projects.filter((p) => !p.hidden).length).padStart(2, "0"), l: locale === "es" ? "Proyectos" : "Projects" },
               { v: "2026", l: locale === "es" ? "Período" : "Period" },
             ].map(({ v, l }) => (
               <div key={l}>
@@ -197,7 +197,7 @@ export default function WorkContent() {
       <div className="px-6 md:px-8 lg:px-12 pb-24 max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {projects.filter(p => !p.hidden).map((project, i) => (
-            <div key={project.slug} className={`col-span-12 ${layout[i].cols}`}>
+            <div key={project.slug} className={`col-span-12 ${layout[i % layout.length].cols}`}>
               <ProjectCard project={project} locale={locale} index={i} />
             </div>
           ))}

@@ -4,7 +4,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import type { Project } from "@/data/projects";
+import { projects, type Project } from "@/data/projects";
+
+const TOTAL_PROJECTS = String(projects.filter((p) => !p.hidden).length).padStart(2, "0");
 
 const EASE = [0.65, 0, 0.35, 1] as [number, number, number, number];
 
@@ -67,7 +69,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
           </ScrollReveal>
           <ScrollReveal delay={0.05}>
             <p className="font-mono text-[10px] text-[#0D0D0D]/30 tracking-widest uppercase">
-              {project.num} / 05 — {L.project}
+              {project.num} / {TOTAL_PROJECTS} — {L.project}
             </p>
           </ScrollReveal>
         </div>
