@@ -15,6 +15,12 @@ const layout = [
   { cols: "md:col-span-5", rows: "h-[62vh]" },
   { cols: "md:col-span-7", rows: "h-[62vh]" },
   { cols: "md:col-span-12", rows: "h-[55vh]" },
+  { cols: "md:col-span-7", rows: "h-[62vh]" },
+  { cols: "md:col-span-5", rows: "h-[62vh]" },
+  { cols: "md:col-span-5", rows: "h-[62vh]" },
+  { cols: "md:col-span-7", rows: "h-[62vh]" },
+  { cols: "md:col-span-6", rows: "h-[62vh]" },
+  { cols: "md:col-span-6", rows: "h-[62vh]" },
 ];
 
 
@@ -175,7 +181,7 @@ export default function WorkContent() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             {[
-              { v: "05", l: locale === "es" ? "Proyectos" : "Projects" },
+              { v: "11", l: locale === "es" ? "Proyectos" : "Projects" },
               { v: "2026", l: locale === "es" ? "Período" : "Period" },
             ].map(({ v, l }) => (
               <div key={l}>
