@@ -9,13 +9,15 @@ import { projectBlur } from "@/data/project-blur";
 
 const TOTAL_PROJECTS = String(projects.filter((p) => !p.hidden).length).padStart(2, "0");
 
-// Escala la tipografía del valor de cada resultado según su longitud:
-// valores cortos ("-90%", "96/100") grandes; frases largas, más pequeñas.
+// Escala la tipografía del valor de cada resultado según su longitud y la
+// palabra más larga (una palabra suelta larga no puede partirse sin verse mal):
+// solo los valores cortos tipo número ("-90%", "96/100") van en tamaño grande.
 function resultValueStyle(value: string): { fontSize: string; lineHeight: number } {
   const len = value.length;
-  if (len <= 9) return { fontSize: "clamp(2.75rem, 6vw, 5rem)", lineHeight: 0.9 };
-  if (len <= 16) return { fontSize: "clamp(1.6rem, 3.4vw, 2.5rem)", lineHeight: 1 };
-  return { fontSize: "clamp(1.15rem, 2.2vw, 1.6rem)", lineHeight: 1.15 };
+  const longestWord = value.split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
+  if (longestWord <= 6 && len <= 9) return { fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)", lineHeight: 0.92 };
+  if (longestWord <= 11 && len <= 18) return { fontSize: "clamp(1.5rem, 3vw, 2.25rem)", lineHeight: 1.05 };
+  return { fontSize: "clamp(1.1rem, 2vw, 1.5rem)", lineHeight: 1.2 };
 }
 
 const EASE = [0.65, 0, 0.35, 1] as [number, number, number, number];
