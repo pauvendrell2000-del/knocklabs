@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { projects, type Project } from "@/data/projects";
+import { projectBlur } from "@/data/project-blur";
 
 const TOTAL_PROJECTS = String(projects.filter((p) => !p.hidden).length).padStart(2, "0");
 
@@ -14,6 +15,7 @@ type Props = { project: Project; locale: "es" | "en"; nextProject?: Project };
 
 function ImageSlot({ folder, file, alt, priority }: { folder?: string; file: string; alt: string; priority?: boolean }) {
   const src = folder ? `/images/projects/${folder}/${file}` : "";
+  const blur = folder ? projectBlur[`${folder}/${file}`] : undefined;
   return src ? (
     <Image
       src={src}
@@ -23,6 +25,8 @@ function ImageSlot({ folder, file, alt, priority }: { folder?: string; file: str
       className="object-contain"
       priority={priority}
       quality={80}
+      placeholder={blur ? "blur" : "empty"}
+      blurDataURL={blur}
     />
   ) : (
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#0D0D0D]/5">
