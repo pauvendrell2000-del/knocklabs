@@ -12,10 +12,18 @@ const EASE = [0.65, 0, 0.35, 1] as [number, number, number, number];
 
 type Props = { project: Project; locale: "es" | "en"; nextProject?: Project };
 
-function ImageSlot({ folder, file, alt }: { folder?: string; file: string; alt: string }) {
+function ImageSlot({ folder, file, alt, priority }: { folder?: string; file: string; alt: string; priority?: boolean }) {
   const src = folder ? `/images/projects/${folder}/${file}` : "";
   return src ? (
-    <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 1280px, 100vw" className="object-contain" />
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      sizes="(min-width: 1024px) 1280px, 100vw"
+      className="object-contain"
+      priority={priority}
+      quality={80}
+    />
   ) : (
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#0D0D0D]/5">
       <p className="font-mono text-xs text-[#0D0D0D]/30 tracking-widest">imagen pendiente</p>
@@ -137,8 +145,9 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
         >
           <ImageSlot
             folder={project.imageFolder}
-            file="hero.png"
+            file="hero.jpg"
             alt={`${project.name[locale]} — hero`}
+            priority
           />
         </motion.div>
       </section>
@@ -188,7 +197,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
             <div className="relative aspect-[4/3] overflow-hidden bg-[#EBE8E0]">
               <ImageSlot
                 folder={project.imageFolder}
-                file="imagen1.png"
+                file="imagen1.jpg"
                 alt={`${project.name[locale]} — imagen 1`}
               />
             </div>
@@ -197,7 +206,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
             <div className="relative aspect-[4/3] overflow-hidden bg-[#EBE8E0]">
               <ImageSlot
                 folder={project.imageFolder}
-                file="imagen2.png"
+                file="imagen2.jpg"
                 alt={`${project.name[locale]} — imagen 2`}
               />
             </div>
@@ -250,7 +259,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
             <div className="relative w-full overflow-hidden bg-[#EBE8E0]" style={{ aspectRatio: "21/10" }}>
               <ImageSlot
                 folder={project.imageFolder}
-                file="portada.png"
+                file="portada.jpg"
                 alt={`${project.name[locale]} — portada`}
               />
             </div>
