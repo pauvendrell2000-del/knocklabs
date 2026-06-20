@@ -16,6 +16,8 @@ export type Project = {
   hidden?: boolean;
   /** Oculta la sección de imagen full-width final (portada) cuando el proyecto no tiene una imagen propia para ella. */
   hidePortada?: boolean;
+  /** Estudio colaborador (se muestra como crédito enlazado en la ficha). */
+  collaborator?: { name: string; url: string };
 };
 
 export const projects: Project[] = [
@@ -59,8 +61,8 @@ export const projects: Project[] = [
     color: "#B8A06A",
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
-      es: "FCC — Fresh Car Cpt., centro de detailing premium de automóviles, necesitaba una web que mostrara su trabajo en su mejor luz, captara clientes en su zona y convirtiera visitas en reservas, consolidando la autoridad de la marca con sus cifras de servicio.",
-      en: "FCC — Fresh Car Cpt., a premium car detailing centre, needed a website that showed its work in its best light, captured clients in its area and turned visits into bookings, reinforcing brand authority with its service figures.",
+      es: "En el detailing de alta gama la primera impresión lo es todo, y la presencia digital de FCC no estaba a la altura de su trabajo. El reto: una web que mostrara cada acabado en su mejor luz, posicionara la marca en su zona y convirtiera las visitas en reservas.",
+      en: "In high-end detailing first impressions are everything, and FCC's digital presence didn't match the quality of their work. The challenge: a website that showed every finish in its best light, positioned the brand locally and turned visits into bookings.",
     },
     solution: {
       es: "Web de FCC bajo el concepto \"La perfección es un proceso\". Diseño oscuro y premium que muestra el trabajo de detailing en su mejor luz, con portal de reservas integrado y posicionamiento SEO/GEO local para captar clientes en su zona. La web convierte visitas en reservas y consolida la autoridad de la marca con sus cifras de servicio.",
@@ -83,8 +85,8 @@ export const projects: Project[] = [
     color: "#C9A227",
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
-      es: "FCC — Fresh Car Cpt., centro de detailing premium de automóviles, necesitaba una imagen a la altura de un servicio de alta gama: una identidad tan cuidada como sus acabados, capaz de desplegarse en todo el sistema de marca.",
-      en: "FCC — Fresh Car Cpt., a premium car detailing centre, needed an image worthy of a high-end service: an identity as refined as their finishes, able to roll out across the entire brand system.",
+      es: "La precisión de los acabados de FCC no se reflejaba en su imagen de marca. Necesitaban una identidad tan cuidada como su trabajo, capaz de sostener el posicionamiento premium en cada pieza, del documento al packaging.",
+      en: "The precision of FCC's finishes wasn't reflected in their brand image. They needed an identity as refined as their work, able to hold a premium positioning across every piece, from paperwork to packaging.",
     },
     solution: {
       es: "Rebranding completo de FCC. Nueva identidad negro y oro con patrón geométrico propio, tan cuidada como sus acabados, aplicada a un sistema de papelería y marca: carpetas, tarjetas, sobres, llaveros, ambientador y packaging. Una imagen a la altura de un servicio de alta gama.",
@@ -107,8 +109,8 @@ export const projects: Project[] = [
     color: "#8A7B3B",
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
-      es: "Trasladar la identidad de FCC al espacio físico, llevando la sensación premium del trabajo de detailing al punto de contacto real con el cliente.",
-      en: "Bring FCC's identity into the physical space, carrying the premium feel of the detailing work into the real customer touchpoint.",
+      es: "La experiencia premium de FCC terminaba en la pantalla. Faltaba llevar esa misma sensación al espacio físico: el punto donde el cliente entrega su coche y se forma la impresión definitiva de la marca.",
+      en: "FCC's premium experience ended at the screen. The missing piece was carrying that same feeling into the physical space — the point where the client hands over their car and forms their final impression of the brand.",
     },
     solution: {
       es: "Aplicación de la identidad de FCC al espacio físico. Showroom oscuro y sobrio donde la marca negro y oro envuelve la experiencia y eleva el producto —el vehículo— a la categoría de pieza expuesta. Rotulación, ambiente y detalles que trasladan la sensación premium del trabajo de detailing al punto de contacto real con el cliente.",
@@ -134,8 +136,8 @@ export const projects: Project[] = [
       en: "Argenpastry, an artisanal Argentine patisserie, needed a premium website with an online store able to put its product photography front and centre and turn the catalogue into sales.",
     },
     solution: {
-      es: "Web premium con tienda online para Argenpastry. Diseño editorial y apetecible, organizado por colecciones de temporada (\"Alfajores / Primavera–Verano\"), con fichas de producto optimizadas para conversión y experiencia responsive en desktop, tablet y móvil. La fotografía propia es la protagonista: el producto se vende solo. En colaboración con MRRipley.",
-      en: "Premium website with an online store for Argenpastry. An appetising editorial design, organised by seasonal collections (\"Alfajores / Spring–Summer\"), with product pages optimised for conversion and a responsive experience across desktop, tablet and mobile. The proprietary photography takes centre stage: the product sells itself. In collaboration with MRRipley.",
+      es: "Web premium con tienda online para Argenpastry. Diseño editorial y apetecible, organizado por colecciones de temporada (\"Alfajores / Primavera–Verano\"), con fichas de producto optimizadas para conversión y experiencia responsive en desktop, tablet y móvil. La fotografía propia es la protagonista: el producto se vende solo.",
+      en: "Premium website with an online store for Argenpastry. An appetising editorial design, organised by seasonal collections (\"Alfajores / Spring–Summer\"), with product pages optimised for conversion and a responsive experience across desktop, tablet and mobile. The proprietary photography takes centre stage: the product sells itself.",
     },
     results: [
       { label: { es: "Tienda online", en: "Online store" }, value: "eCommerce" },
@@ -145,6 +147,7 @@ export const projects: Project[] = [
     nextSlug: "argenpastry-foto",
     imageFolder: "ArgenpastryWeb",
     hidePortada: true,
+    collaborator: { name: "MRRipley", url: "https://www.mrripley.es" },
   },
   {
     slug: "argenpastry-foto",
@@ -158,8 +161,8 @@ export const projects: Project[] = [
       en: "Argenpastry needed a proprietary product photography library —alfajores, empanadas and facturas— built to sell across product pages, social media and seasonal campaigns.",
     },
     solution: {
-      es: "Banco de fotografía de producto para Argenpastry: alfajores (chocolate blanco, negro, maicena y triple), empanadas y facturas surtidas. Desarrollamos la dirección de arte y un sistema visual propio —bodegones cenitales, planos de colección y banners de campaña— sobre fondos cálidos que realzan textura y apetito. Cada toma está pensada para vender. En colaboración con MRRipley.",
-      en: "Product photography library for Argenpastry: alfajores (white, dark, cornstarch and triple chocolate), empanadas and assorted facturas. We developed the art direction and a proprietary visual system —overhead still lifes, collection layouts and campaign banners— on warm backgrounds that enhance texture and craving. Every shot is built to sell. In collaboration with MRRipley.",
+      es: "Banco de fotografía de producto para Argenpastry: alfajores (chocolate blanco, negro, maicena y triple), empanadas y facturas surtidas. Desarrollamos la dirección de arte y un sistema visual propio —bodegones cenitales, planos de colección y banners de campaña— sobre fondos cálidos que realzan textura y apetito. Cada toma está pensada para vender.",
+      en: "Product photography library for Argenpastry: alfajores (white, dark, cornstarch and triple chocolate), empanadas and assorted facturas. We developed the art direction and a proprietary visual system —overhead still lifes, collection layouts and campaign banners— on warm backgrounds that enhance texture and craving. Every shot is built to sell.",
     },
     results: [
       { label: { es: "Fotografías de producto", en: "Product photos" }, value: "40+" },
@@ -168,6 +171,7 @@ export const projects: Project[] = [
     ],
     nextSlug: "yucahu-web",
     imageFolder: "ArgenpastryFoto",
+    collaborator: { name: "MRRipley", url: "https://www.mrripley.es" },
   },
   {
     slug: "yucahu-web",
@@ -229,8 +233,8 @@ export const projects: Project[] = [
       en: "Pastisseria Sala, a Barcelona patisserie with roots dating back to 1867, needed a full identity that honoured its heritage with a contemporary eye and rolled out across every touchpoint.",
     },
     solution: {
-      es: "Identidad integral para Pastisseria Sala. Creamos logotipo y monograma, paleta terracota y crema, tipografía y un sistema gráfico cálido y elegante que pone en valor su herencia con una mirada contemporánea. Lo desplegamos en todo el sistema de marca —packaging premium (cajas y bolsas), uniformes, papelería y experiencia de tienda— para que cada caja que sale por la puerta sea una pieza de comunicación. En colaboración con MRRipley.",
-      en: "Full identity for Pastisseria Sala. We created the logotype and monogram, a terracotta-and-cream palette, typography and a warm, elegant graphic system that honours its heritage with a contemporary eye. We rolled it out across the entire brand system —premium packaging (boxes and bags), uniforms, stationery and the in-store experience— so that every box leaving the shop is a piece of communication. In collaboration with MRRipley.",
+      es: "Identidad integral para Pastisseria Sala. Creamos logotipo y monograma, paleta terracota y crema, tipografía y un sistema gráfico cálido y elegante que pone en valor su herencia con una mirada contemporánea. Lo desplegamos en todo el sistema de marca —packaging premium (cajas y bolsas), uniformes, papelería y experiencia de tienda— para que cada caja que sale por la puerta sea una pieza de comunicación.",
+      en: "Full identity for Pastisseria Sala. We created the logotype and monogram, a terracotta-and-cream palette, typography and a warm, elegant graphic system that honours its heritage with a contemporary eye. We rolled it out across the entire brand system —premium packaging (boxes and bags), uniforms, stationery and the in-store experience— so that every box leaving the shop is a piece of communication.",
     },
     results: [
       { label: { es: "Herencia activada", en: "Heritage activated" }, value: "1867" },
@@ -239,6 +243,7 @@ export const projects: Project[] = [
     ],
     nextSlug: "moltamerda",
     imageFolder: "PastisseriaSala",
+    collaborator: { name: "MRRipley", url: "https://www.mrripley.es" },
   },
   {
     slug: "moltamerda",
@@ -272,8 +277,8 @@ export const projects: Project[] = [
     color: "#FF6B35",
     duration: { es: "3 semanas", en: "3 weeks" },
     challenge: {
-      es: "Team Espadas, club de boxeo olímpico con fuerte vocación social fundado por Paco Espadas en Esparraguera y más de 40 años de trayectoria, necesitaba transformar su proyecto en una marca profesional con un modelo de negocio claro y escalable.",
-      en: "Team Espadas, an Olympic boxing club with a strong social mission founded by Paco Espadas in Esparraguera with over 40 years in the sport, needed to transform its project into a professional brand with a clear, scalable business model.",
+      es: "Con más de 40 años de trayectoria y una fuerte vocación social, el club de boxeo olímpico de Paco Espadas en Esparraguera seguía funcionando como un proyecto, no como una marca. El reto: convertirlo en una marca profesional con un modelo de negocio claro y escalable, capaz de atraer patrocinadores, subvenciones y socios.",
+      en: "With over 40 years in the sport and a strong social mission, Paco Espadas's Olympic boxing club in Esparraguera still ran like a project, not a brand. The challenge: turn it into a professional brand with a clear, scalable business model able to attract sponsors, grants and members.",
     },
     solution: {
       es: "Identidad y estrategia para Team Espadas. Creamos la marca completa —monograma \"E\", sistema visual negro y rojo, tono y dirección de campaña— aplicada al entorno deportivo, merchandising y comunicación en redes (\"Never Give Up\"). Desarrollamos el modelo de negocio estructurando las vías social y deportiva, con materiales listos para presentar a patrocinadores, inversores y administraciones.",

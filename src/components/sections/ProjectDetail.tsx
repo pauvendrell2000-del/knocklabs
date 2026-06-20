@@ -60,6 +60,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
       back: "← Volver",
       project: "Proyecto",
       overview: "Overview",
+      collab: "Colaboración",
     },
     en: {
       duration: "Duration",
@@ -70,6 +71,7 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
       back: "← Back",
       project: "Project",
       overview: "Overview",
+      collab: "Collaboration",
     },
   }[locale];
 
@@ -142,6 +144,22 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
                     </p>
                   </div>
                 ))}
+                {project.collaborator && (
+                  <div className="flex items-start justify-between gap-4 py-4 border-b border-[#0D0D0D]/10">
+                    <p className="font-mono text-[10px] text-[#0D0D0D]/40 tracking-widest uppercase shrink-0">
+                      {L.collab}
+                    </p>
+                    <a
+                      href={project.collaborator.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-archivo text-sm text-right underline decoration-[#0D0D0D]/30 underline-offset-4 hover:decoration-[#0D0D0D] transition-colors"
+                      style={{ letterSpacing: "-0.01em", color: project.color }}
+                    >
+                      {project.collaborator.name} ↗
+                    </a>
+                  </div>
+                )}
               </div>
             </ScrollReveal>
           </div>
