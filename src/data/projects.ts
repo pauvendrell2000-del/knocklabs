@@ -14,6 +14,8 @@ export type Project = {
   nextSlug: string;
   imageFolder?: string;
   hidden?: boolean;
+  /** Oculta la sección de imagen full-width final (portada) cuando el proyecto no tiene una imagen propia para ella. */
+  hidePortada?: boolean;
 };
 
 export const projects: Project[] = [
@@ -71,6 +73,7 @@ export const projects: Project[] = [
     ],
     nextSlug: "fcc-branding",
     imageFolder: "FCCWeb",
+    hidePortada: true,
   },
   {
     slug: "fcc-branding",
@@ -94,6 +97,7 @@ export const projects: Project[] = [
     ],
     nextSlug: "fcc-local",
     imageFolder: "FCCBranding",
+    hidePortada: true,
   },
   {
     slug: "fcc-local",
@@ -140,6 +144,7 @@ export const projects: Project[] = [
     ],
     nextSlug: "argenpastry-foto",
     imageFolder: "ArgenpastryWeb",
+    hidePortada: true,
   },
   {
     slug: "argenpastry-foto",
@@ -186,6 +191,7 @@ export const projects: Project[] = [
     ],
     nextSlug: "yucahu-packaging",
     imageFolder: "YucahuWeb",
+    hidePortada: true,
   },
   {
     slug: "yucahu-packaging",
@@ -209,6 +215,7 @@ export const projects: Project[] = [
     ],
     nextSlug: "pastisseria-sala",
     imageFolder: "YucahuPackaging",
+    hidePortada: true,
   },
   {
     slug: "pastisseria-sala",
@@ -255,6 +262,7 @@ export const projects: Project[] = [
     ],
     nextSlug: "team-espadas",
     imageFolder: "Moltamerda",
+    hidePortada: true,
   },
   {
     slug: "team-espadas",

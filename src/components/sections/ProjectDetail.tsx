@@ -242,17 +242,19 @@ export default function ProjectDetail({ project, locale, nextProject }: Props) {
       </section>
 
       {/* ══ 6. FULL-WIDTH IMAGE ═══════════════════════════════════ */}
-      <section className="px-6 md:px-8 lg:px-12 pb-16 md:pb-24 max-w-[1920px] mx-auto">
-        <ScrollReveal>
-          <div className="relative w-full overflow-hidden bg-[#EBE8E0]" style={{ aspectRatio: "21/10" }}>
-            <ImageSlot
-              folder={project.imageFolder}
-              file="portada.png"
-              alt={`${project.name[locale]} — portada`}
-            />
-          </div>
-        </ScrollReveal>
-      </section>
+      {!project.hidePortada && (
+        <section className="px-6 md:px-8 lg:px-12 pb-16 md:pb-24 max-w-[1920px] mx-auto">
+          <ScrollReveal>
+            <div className="relative w-full overflow-hidden bg-[#EBE8E0]" style={{ aspectRatio: "21/10" }}>
+              <ImageSlot
+                folder={project.imageFolder}
+                file="portada.png"
+                alt={`${project.name[locale]} — portada`}
+              />
+            </div>
+          </ScrollReveal>
+        </section>
+      )}
 
       {/* ══ 7. RESULTS — dark contrast ═════════════════════════════ */}
       <section className="bg-[#0D0D0D] text-cream">
