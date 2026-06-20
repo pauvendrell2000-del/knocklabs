@@ -95,7 +95,7 @@ export const projects: Project[] = [
     results: [
       { label: { es: "Piezas del sistema de marca", en: "Brand system pieces" }, value: "6+" },
       { label: { es: "Identidad", en: "Identity" }, value: "Negro & Oro" },
-      { label: { es: "Posicionamiento", en: "Positioning" }, value: "Premium" },
+      { label: { es: "Patrón geométrico", en: "Geometric pattern" }, value: "Propio" },
     ],
     nextSlug: "fcc-local",
     imageFolder: "FCCBranding",
@@ -132,8 +132,8 @@ export const projects: Project[] = [
     color: "#B5651D",
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
-      es: "Argenpastry, repostería argentina artesanal, necesitaba una web premium con tienda online capaz de poner la fotografía de producto en primer plano y convertir el catálogo en ventas.",
-      en: "Argenpastry, an artisanal Argentine patisserie, needed a premium website with an online store able to put its product photography front and centre and turn the catalogue into sales.",
+      es: "El producto de Argenpastry entra por los ojos, pero su repostería argentina artesanal no tenía dónde lucir ni cómo venderse online. El reto: una tienda premium donde la fotografía mandara y el catálogo se convirtiera en ventas.",
+      en: "Argenpastry's product is made to be devoured with the eyes, but their artisanal Argentine patisserie had nowhere to shine and no way to sell online. The challenge: a premium store where photography led and the catalogue turned into sales.",
     },
     solution: {
       es: "Web premium con tienda online para Argenpastry. Diseño editorial y apetecible, organizado por colecciones de temporada (\"Alfajores / Primavera–Verano\"), con fichas de producto optimizadas para conversión y experiencia responsive en desktop, tablet y móvil. La fotografía propia es la protagonista: el producto se vende solo.",
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     },
     results: [
       { label: { es: "Tienda online", en: "Online store" }, value: "eCommerce" },
-      { label: { es: "Dispositivos", en: "Devices" }, value: "Desktop · Tablet · Mobile" },
+      { label: { es: "Organización", en: "Organisation" }, value: "Por colecciones" },
       { label: { es: "Experiencia", en: "Experience" }, value: "100% responsive" },
     ],
     nextSlug: "argenpastry-foto",
@@ -157,8 +157,8 @@ export const projects: Project[] = [
     color: "#A0522D",
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
-      es: "Argenpastry necesitaba un banco de fotografía de producto propio —alfajores, empanadas y facturas— pensado para vender en ficha de producto, redes y campañas de temporada.",
-      en: "Argenpastry needed a proprietary product photography library —alfajores, empanadas and facturas— built to sell across product pages, social media and seasonal campaigns.",
+      es: "Sin fotografía propia, el producto de Argenpastry dependía de imágenes prestadas que no transmitían su carácter artesanal. El reto: un banco visual propio que vendiera por sí solo en ficha, redes y campañas de temporada.",
+      en: "Without its own photography, Argenpastry's product relied on borrowed images that didn't convey its artisanal character. The challenge: a proprietary visual library that sold on its own across product pages, social media and seasonal campaigns.",
     },
     solution: {
       es: "Banco de fotografía de producto para Argenpastry: alfajores (chocolate blanco, negro, maicena y triple), empanadas y facturas surtidas. Desarrollamos la dirección de arte y un sistema visual propio —bodegones cenitales, planos de colección y banners de campaña— sobre fondos cálidos que realzan textura y apetito. Cada toma está pensada para vender.",
@@ -181,8 +181,8 @@ export const projects: Project[] = [
     color: "#7B1E3A",
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
-      es: "Yucahú, café de especialidad de origen único, necesitaba trasladar el lenguaje de marca al entorno digital con una tienda online capaz de sostener su posicionamiento de especialidad mediante la trazabilidad de cada lote.",
-      en: "Yucahú, a single-origin specialty coffee, needed to carry its brand language into the digital space with an online store able to support its specialty positioning through per-batch traceability.",
+      es: "El relato de origen de Yucahú —valle, altitud, variedad— se perdía en cuanto saltaba a lo digital. El reto: una tienda online que sostuviera el posicionamiento de especialidad con la trazabilidad de cada lote.",
+      en: "Yucahú's origin story —valley, altitude, variety— got lost the moment it moved online. The challenge: an online store that upheld its specialty positioning through the traceability of every batch.",
     },
     solution: {
       es: "Web con tienda online para Yucahú. Diseño premium y editorial que traslada el lenguaje de la marca al entorno digital, con fichas de producto que detallan origen, altitud, variedad y proceso de cada lote para sostener el posicionamiento de especialidad. Experiencia de compra cuidada y responsive, con la fotografía y el packaging como protagonistas.",
@@ -205,8 +205,8 @@ export const projects: Project[] = [
     color: "#5C1A2E",
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
-      es: "Yucahú, café de especialidad del Valle del Cibao (República Dominicana), llegaba sin marca. Había que construir una identidad desde cero y un packaging de lujo que comunicara trazabilidad y carácter artesanal.",
-      en: "Yucahú, a specialty coffee from the Cibao Valley (Dominican Republic), arrived with no brand. We had to build an identity from scratch and luxury packaging that communicated traceability and artisan character.",
+      es: "Yucahú tenía un café de especialidad excepcional del Valle del Cibao (República Dominicana), pero ni marca ni packaging a su altura. Había que construir una identidad desde cero y un envase de lujo que comunicara trazabilidad y oficio artesanal.",
+      en: "Yucahú had an exceptional single-origin coffee from the Cibao Valley (Dominican Republic), but neither a brand nor packaging to match it. We had to build an identity from scratch and luxury packaging that communicated traceability and artisan craft.",
     },
     solution: {
       es: "Identidad y packaging premium para Yucahú, café de especialidad de origen único del Valle del Cibao (variedad Typica, 1.200m). Construimos la marca desde cero —naming, monograma, sistema gráfico y una paleta burdeos y crema de aire ceremonioso— y la llevamos a un packaging de lujo: estuche, sellos en lacre dorado, papel artesanal con relieve y cerámica. Cada detalle comunica trazabilidad y carácter artesanal.",
@@ -229,8 +229,8 @@ export const projects: Project[] = [
     color: "#C26B4A",
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
-      es: "Pastisseria Sala, pastelería barcelonesa con raíces desde 1867, necesitaba una identidad integral que pusiera en valor su herencia con una mirada contemporánea y se desplegara en cada punto de contacto.",
-      en: "Pastisseria Sala, a Barcelona patisserie with roots dating back to 1867, needed a full identity that honoured its heritage with a contemporary eye and rolled out across every touchpoint.",
+      es: "Con más de 150 años de historia, Pastisseria Sala tenía una herencia que su imagen ya no contaba. El reto: una identidad integral que pusiera en valor 1867 con una mirada contemporánea y se desplegara en cada punto de contacto.",
+      en: "With over 150 years of history, Pastisseria Sala had a heritage its image no longer told. The challenge: a full identity that brought 1867 to life with a contemporary eye and rolled out across every touchpoint.",
     },
     solution: {
       es: "Identidad integral para Pastisseria Sala. Creamos logotipo y monograma, paleta terracota y crema, tipografía y un sistema gráfico cálido y elegante que pone en valor su herencia con una mirada contemporánea. Lo desplegamos en todo el sistema de marca —packaging premium (cajas y bolsas), uniformes, papelería y experiencia de tienda— para que cada caja que sale por la puerta sea una pieza de comunicación.",
@@ -253,8 +253,8 @@ export const projects: Project[] = [
     color: "#4F46E5",
     duration: { es: "Concluido", en: "Completed" },
     challenge: {
-      es: "Moltamerda, empresa de limpieza y fumigación especializada (maquinaria agrícola, naves ganaderas e industriales), necesitaba digitalizar toda su operativa: una web con reserva online ágil y una herramienta de gestión a medida.",
-      en: "Moltamerda, a specialised cleaning and fumigation company (agricultural machinery, livestock and industrial facilities), needed to digitise its entire operation: a website with quick online booking and a bespoke management tool.",
+      es: "Moltamerda gestionaba a mano las reservas y la operativa de un servicio especializado de limpieza y fumigación (maquinaria agrícola, naves ganaderas e industriales). El reto: digitalizarlo todo, de la reserva online a la gestión del negocio.",
+      en: "Moltamerda was handling bookings and operations for a specialised cleaning and fumigation service by hand (agricultural machinery, livestock and industrial facilities). The challenge: digitise it all, from online booking to running the business.",
     },
     solution: {
       es: "Web y herramienta de gestión a medida para Moltamerda. Diseñamos la web completa con reserva online en menos de dos minutos y construimos un panel de gestión propio: dashboard de negocio con reservas, calendario de servicios, ficha de clientes y control de ingresos y pagos. Plataforma entregada en producción que digitaliza toda la operativa.",
