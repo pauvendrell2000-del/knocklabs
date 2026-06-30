@@ -9,9 +9,11 @@ import PageTransition from "@/components/ui/PageTransition";
 const MAINTENANCE_MODE = true;
 
 export default function GlobalChrome({ children }: { children: React.ReactNode }) {
+  // Hooks must run before any early return (rules-of-hooks)
+  const pathname = usePathname() || "";
+
   if (MAINTENANCE_MODE) return <>{children}</>;
 
-  const pathname = usePathname() || "";
   const segments = pathname.split("/").filter(Boolean);
   const isKnockvision = segments[1] === "knockvision";
 
