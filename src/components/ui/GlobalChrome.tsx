@@ -5,7 +5,12 @@ import Nav from "@/components/ui/Nav";
 import Footer from "@/components/ui/Footer";
 import PageTransition from "@/components/ui/PageTransition";
 
+// Flip to false when the site is ready to go live
+const MAINTENANCE_MODE = true;
+
 export default function GlobalChrome({ children }: { children: React.ReactNode }) {
+  if (MAINTENANCE_MODE) return <>{children}</>;
+
   const pathname = usePathname() || "";
   const segments = pathname.split("/").filter(Boolean);
   const isKnockvision = segments[1] === "knockvision";

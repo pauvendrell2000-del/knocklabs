@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import HomeContent from "./HomeContent";
+import UnderConstruction from "@/components/ui/UnderConstruction";
+
+// Flip to false when the site is ready to go live
+const MAINTENANCE_MODE = true;
 
 type Props = { params: { locale: string } };
 
@@ -31,5 +35,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function HomePage() {
+  if (MAINTENANCE_MODE) return <UnderConstruction />;
   return <HomeContent />;
 }
