@@ -6,7 +6,7 @@ import { useLocale } from "next-intl";
 const copy = {
   es: {
     statusLabel: "// estado",
-    headline: "En construcción.",
+    headline: "En Construcción.",
     completed: "completado",
     tagline: "Estamos construyendo algo que merece ser visto.",
     contactLabel: "// contacto",
